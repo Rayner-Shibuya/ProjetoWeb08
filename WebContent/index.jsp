@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,47 +14,29 @@
 </head>
 
 <body>
-    <!-- Barra superior com os menus de navegação -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.jsp">Cadastro</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.jsp">Pais</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Barra superior com os menus de navegacao -->
+	<c:import url="Menu.jsp"/>
     <!-- Container Principal -->
-    <div id="main" class="container">
+      <div id="main" class="container">
         <h3 class="page-header">Incluir Pais</h3>
         <!-- Formulario para inclusao de clientes -->
         <form action="Pais.do" method="post">
             <!-- area de campos do form -->
             <div class="row">
                 <div class="form-group col-md-12">
-                    <label for="nome">Nome do país</label>
-                    <input type="text" class="form-control" name="nome" id="nome" required maxlength="100" placeholder="nome do país">
+                    <label for="nome">Nome do paÃ­s</label>
+                    <input type="text" class="form-control" name="nome" id="nome" required maxlength="100" placeholder="nome do paÃ­s">
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
-                    <label for="populacao">População</label>
-                    <input type="number" class="form-control" name="populacao" id="populacao" maxlength="100" placeholder="Numero da população">
+                    <label for="populacao">PopulaÃ§Ã£o</label>
+                    <input type="number" class="form-control" name="populacao" id="populacao" maxlength="100" placeholder="Numero da populaÃ§Ã£o">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="area">Area</label>
-                    <input type="number" class="form-control" name="area" id="area" required maxlength="60" placeholder="Area do País">
+                    <input type="number" class="form-control" name="area" id="area" required maxlength="60" placeholder="Area do PaÃ­s">
                 </div>
             </div>
             <hr />
@@ -66,6 +48,9 @@
             </div>
         </form>
     </div>
+  
+  
+  
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
